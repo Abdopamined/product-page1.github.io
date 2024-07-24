@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #2b293e;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 90vh 100vh 100vh 100vh 10vh;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "header"
+    "section1"
+    "section2"
+    "section3"
+    "footer";   
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(0deg, black, #00000088) , url(assets/head.webp);
+    background-size: cover;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    box-shadow: 0 0 40px black;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    width: 15em;
+    height: 15em;
+    grid-template-columns: 110px 110px 110px;
+    grid-template-rows: 110px 110px 110px;
+    transform: rotate(45deg);
+    margin-bottom: 100px;
+}
+
+.square {
+    background-color: #754ec3;
+    border-radius: 5px;
+    width: 30%;
+    height: 30%;
+}
+
+header span {
+    color: #754ec3;
+    text-shadow: 0 0 5px #754ec3;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 15;
+}
+
+.slogan {
+    font-size: 15px;
+    color: #646464;
+    text-shadow: 0 0 5px #6c6c6c;
+    font-weight: normal;
+    font-family: "Noto Sans", sans-serif;
+    letter-spacing: 5;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-area: section1;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    padding-top: 15vh;
+    height: 100vh;
+}
+
+.container2{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.imageGallery {
+    width: 50%;
+    height: 60%;
+    gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.images {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.2;
+    transition: 0.2s;
+}
+.images:hover {
+    opacity: 1;
+    transform: scale(1.3);
+    transition: 0.2s;
+}
+
+.about {
+    grid-area: section2;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    padding-top: 20vh;
+}
+.about-content {
+    margin-top: 20vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #333;
+    grid-column: 1 / -1;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+.contact {
+    grid-area: section3;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    background: linear-gradient(0deg, #000000db, #2b293ed1), url(assets/contact.jpg);
+    background-size: cover;
+    padding-top: 20vh;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #754ec3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #5a3ea1;
+}
+
+footer {
+    background-color: black;
+    color: rgb(78, 78, 78);
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    padding-top: 25px;
+    grid-area: footer;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
