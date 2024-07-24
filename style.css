@@ -630,6 +630,7 @@ footer {
     align-items: center;
     border-top: 1px solid rgb(23, 23, 23);
     padding-top: 12px;
+    background-color: black;
 }
 footer svg{
     filter: invert(24%) sepia(12%) saturate(9%) hue-rotate(351deg) brightness(93%) contrast(97%);
